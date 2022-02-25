@@ -1,6 +1,7 @@
 let email = document.getElementById('user-email');
 const buttonemail = document.getElementById("btncontrol");
 const buttongame = document.getElementById("btnrandom");
+const buttonreset = document.getElementById("btnreset");
 let found;
 
 buttonemail.addEventListener("click", function(){
@@ -18,11 +19,11 @@ buttonemail.addEventListener("click", function(){
     }
 
     if(found == 1){
-        mailresult.innerHTML = "La mail inserita è presente nel database."
+        mailresult.innerHTML = "La mail inserita è presente nel database.";
     }
     else{
-        mailresult.innerHTML = "La mail inserita non è stata trovata."
-        mailresult.classList.add("text-red")
+        mailresult.innerHTML = "La mail inserita non è stata trovata.";
+        mailresult.classList.add("text-red");
     }
 })
 
@@ -37,9 +38,16 @@ buttongame.addEventListener("click", function(){
     document.getElementById("computer-number").innerHTML = computer;
 
     if(player > computer){
-        const gamewinner = document.getElementById("winner").innerHTML = "Hai vinto!!!" 
+        const gamewinner = document.getElementById("winner").innerHTML = "Hai vinto!!!";
+    }
+    else if(player == computer){
+        const gamewinner = document.getElementById("winner").innerHTML = "Parità";
     }
     else{
-        const gamewinner = document.getElementById("winner").innerHTML = "Ha vinto il computer" 
+        const gamewinner = document.getElementById("winner").innerHTML = "Ha vinto il computer";
     }
+})
+
+buttonreset.addEventListener("click", function(){
+    window.location.reload();
 })

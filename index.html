@@ -10,7 +10,7 @@
     <title>mail dadi</title>
 </head>
 <body>
-    <main>
+    <main class="bg-info">
         <div class="container d-flex justify-content-center align-items-center vh-100">
             <div class="row">
                 <div class="col-12 d-flex flex-column align-items-center mb-5 pb-5">
@@ -22,7 +22,7 @@
                             <input class="rounded-pill" type="text" id="user-email">
                         </form>
                     </div>
-                    <button id="btncontrol" class="btn bg-light-grey btn-outline-secondary fw-bold">Verifica</button>
+                    <button id="btncontrol" class="btn bg-dark text-light fw-bold">Verifica</button>
                 </div>
                 <div class="col-12 d-flex flex-column align-items-center">
                     <h1 class="pb-5 pt-2">Minigioco dei dadi</h1>
@@ -32,7 +32,10 @@
                         <p id="computer-number"></p>
                         <p id="winner"></p>
                     </div>
-                    <button id="btnrandom" class="btn bg-light-grey btn-outline-secondary fw-bold">Genera</button>
+                    <div class="d-flex">
+                        <button id="btnrandom" class="btn bg-dark text-light fw-bold me-3">Genera</button>
+                        <button id="btnreset" class="btn bg-red text-light fw-bold">Resetta Pagina</button>
+                    </div>
                 </div>
             </div>
         </div>
